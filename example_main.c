@@ -8,7 +8,11 @@
 #include "saleae_v2_digital.h"
 
 /* example: NAND with async parallel 8-Bit bus
- * channels 0..7: Data[0..7] */
+ * channels 0..7: Data[0..7]
+ *
+ * NOTE: this is just an example to demonstrate use of logic_init/_replay/_cleanup
+ * doing something useful is left as an exercise for the reader ;)
+ */
 #define nCE_CH    9
 #define nWE_CH    10
 #define nRE_CH    11
