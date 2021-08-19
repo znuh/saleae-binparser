@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+/* source: https://support.saleae.com/faq/technical-faq/binary-export-format-logic-2 */
+
 typedef struct __attribute__((packed)) {
 	uint8_t id[8];
 	int32_t version; /* 0 */
