@@ -5,7 +5,7 @@ Fast parser for Saleae Logic 2 binary export format (Digital only, Linux only)
 Only tested on Linux - might work on BSDs with minor modifications?
 
 ## Performance
-Processing 21GiB of data from a fast NVMe takes approximately 30 seconds on a Ryzen7 with 32GiB RAM.
+Processing 21GiB of data takes approximately 30 seconds on a Ryzen7 with sufficient RAM and/or a fast NVMe.
 
 ## Usage
 ```
