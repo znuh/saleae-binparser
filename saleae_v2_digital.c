@@ -19,7 +19,13 @@
 #include <float.h>
 #include <string.h>
 #include <stdio.h>
-#include <alloca.h>
+#if defined(__linux__)
+#  include <alloca.h>
+#elif defined(__FreeBSD__) // || defined(__SomeotherBSD__)
+#  include <stdlib.h>
+#else
+#  error Do not know where alloca is defined on your system
+#endif
 #include <assert.h>
 
 #include "saleae_v2_digital.h"
