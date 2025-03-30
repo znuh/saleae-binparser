@@ -16,7 +16,7 @@
  */
 
 #include <inttypes.h>
-#include <values.h>
+#include <float.h>
 #include <string.h>
 #include <stdio.h>
 #include <alloca.h>
@@ -153,7 +153,7 @@ int logic_init(logic_t *logic, const char *file_prefix) {
 	
 	/* end-of-queue marker */
 	logic->transitions = logic->trans_pool+MAX_CHANNELS+1;
-	logic->transitions->timestamp = MAXDOUBLE;
+	logic->transitions->timestamp = DBL_MAX;
 	
 	/* initial fill for the queue - fill queue from all channels */
 	refill_queue(logic, logic->channel_list, logic->n_channels);
