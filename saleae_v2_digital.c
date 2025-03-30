@@ -21,7 +21,7 @@
 #include <stdio.h>
 #if defined(__linux__)
 #  include <alloca.h>
-#elif defined(__FreeBSD__) // || defined(__SomeotherBSD__)
+#elif defined(__FreeBSD__) || defined(__APPLE__)
 #  include <stdlib.h>
 #else
 #  error Do not know where alloca is defined on your system
