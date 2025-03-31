@@ -16,10 +16,16 @@
  */
 
 #include <inttypes.h>
-#include <values.h>
+#include <float.h>
 #include <string.h>
 #include <stdio.h>
-#include <alloca.h>
+#if defined(__linux__)
+#  include <alloca.h>
+#elif defined(__FreeBSD__) || defined(__APPLE__)
+#  include <stdlib.h>
+#else
+#  error Do not know where alloca is defined on your system
+#endif
 #include <assert.h>
 
 #include "saleae_v2_digital.h"
@@ -153,7 +159,7 @@ int logic_init(logic_t *logic, const char *file_prefix) {
 	
 	/* end-of-queue marker */
 	logic->transitions = logic->trans_pool+MAX_CHANNELS+1;
-	logic->transitions->timestamp = MAXDOUBLE;
+	logic->transitions->timestamp = DBL_MAX;
 	
 	/* initial fill for the queue - fill queue from all channels */
 	refill_queue(logic, logic->channel_list, logic->n_channels);
