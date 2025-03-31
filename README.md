@@ -1,5 +1,5 @@
 # saleae-binparser
-Fast parser for Saleae Logic 2 binary export format (Digital only, Linux only)
+Fast parser for Saleae Logic 2 binary export format (Digital only)
 
 ## Requirements
 Originates from Linux, works on FreeBSD as well.
