@@ -26,7 +26,6 @@
 #else
 #  error Do not know where alloca is defined on your system
 #endif
-#include <assert.h>
 
 #include "saleae_v2_digital.h"
 
